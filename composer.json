@@ -1,0 +1,52 @@
+{
+    "name": "vectorial1024/symfony-gsa-mailer",
+    "description": "Google Service Account (GSA) mailer, with GSA Key auth, for Symfony.",
+    "keywords": [
+        "symfony",
+        "google",
+        "gmail",
+        "gsa",
+        "google-service-account",
+        "google-service-account-key",
+        "transport",
+        "google workspace"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Vectorial1024\\SymfonyGsaMailer\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Vectorial1024\\LaravelGmail\\Test\\": "test/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Vectorial1024"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^8.4",
+        "google/apiclient": "^2.0",
+        "symfony/mailer": "^8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^13.0"
+    },
+    "scripts": {
+        "pre-autoload-dump": "Google\\Task\\Composer::cleanup",
+        "test": "vendor/bin/phpunit"
+    },
+    "extra": {
+        "google/apiclient-services": [
+            "Gmail"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
